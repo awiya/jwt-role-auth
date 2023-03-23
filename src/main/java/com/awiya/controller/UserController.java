@@ -3,10 +3,7 @@ package com.awiya.controller;
 import com.awiya.entities.User;
 import com.awiya.services.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
 
@@ -18,12 +15,22 @@ public class UserController {
     private final UserService userService;
 
     @PostConstruct
-    public void initUsersAndRoles(){
+    public void initUsersAndRoles() {
         userService.initUsersAndRoles();
     }
 
     @PostMapping("/create")
-    public User createUser(@RequestBody User user){
+    public User createUser(@RequestBody User user) {
         return userService.createUser(user);
+    }
+
+    @GetMapping("/forAdmin")
+    public String authAdmin() {
+        return "THIS URL IS ONLY FOR ADMIN";
+    }
+
+    @GetMapping("/forUser")
+    public String authUser() {
+        return "THIS URL IS ONLY FOR USER";
     }
 }
