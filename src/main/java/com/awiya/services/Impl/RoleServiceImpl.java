@@ -1,7 +1,8 @@
-package com.awiya.services;
+package com.awiya.services.Impl;
 
 import com.awiya.entities.Role;
 import com.awiya.repositories.RoleRepository;
+import com.awiya.services.RoleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

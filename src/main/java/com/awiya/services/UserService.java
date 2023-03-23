@@ -4,4 +4,6 @@ import com.awiya.entities.User;
 
 public interface UserService {
     User createUser(User user);
+
+    void initUsersAndRoles();
 }
