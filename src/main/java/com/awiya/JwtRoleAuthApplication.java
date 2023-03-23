@@ -13,9 +13,6 @@ public class JwtRoleAuthApplication {
 		SpringApplication.run(JwtRoleAuthApplication.class, args);
 	}
 
-	@Bean
-	PasswordEncoder encoder(){
-		return new BCryptPasswordEncoder();
-	}
+
 
 }
