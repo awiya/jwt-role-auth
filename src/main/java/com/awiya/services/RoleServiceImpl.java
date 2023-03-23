@@ -1,4 +1,4 @@
-package com.awiya.service;
+package com.awiya.services;
 
 import com.awiya.entities.Role;
 import com.awiya.repositories.RoleRepository;

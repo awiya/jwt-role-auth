@@ -1,12 +1,9 @@
 package com.awiya.controller;
 
 import com.awiya.entities.Role;
-import com.awiya.service.RoleService;
+import com.awiya.services.RoleService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import static org.springframework.http.HttpStatus.CREATED;
 
 @RestController
 @RequestMapping("/roles")
